@@ -12,7 +12,8 @@
   },
   "scripts": {
     "test": "npm run eslint",
-    "eslint": "eslint --ext .js src/"
+    "eslint": "eslint --ext .js src/",
+    "start": "node ./src/service/service.js"
   }
   ,
   "author": "Edem Reshidov",
