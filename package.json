@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Куплю.Продам",
   "main": "./src/service/service.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/newfaceee/651317-buy-and-sell-3.git"
