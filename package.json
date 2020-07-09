@@ -10,9 +10,9 @@
   "scripts": {
     "test": "npm run eslint",
     "eslint": "eslint --ext .js src/",
-    "start": "node ./src/service/service.js"
-  }
-  ,
+    "start": "node ./src/service/service.js",
+    "start.dev": "nodemon ./src/main.js"
+  },
   "author": "Edem Reshidov",
   "license": "ISC",
   "bugs": {
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/newfaceee/651317-buy-and-sell-3#readme",
   "devDependencies": {
     "eslint": "7.3.1",
-    "eslint-config-htmlacademy": "0.5.2"
+    "eslint-config-htmlacademy": "0.5.2",
+    "nodemon": "2.0.4"
   }
 }
