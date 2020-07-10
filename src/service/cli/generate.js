@@ -2,6 +2,7 @@
 const fs = require(`fs`).promises;
 const chalk = require(`chalk`);
 const {getRandomInt, shuffle, getPictureFileName, readContent} = require(`../utils.js`);
+const { ExitCode } = require("../../../../651317-typoteka-3/src/constants.js");
 
 const DEFAULT_COUNT = 1;
 const FILE_NAME = `mocks.json`;
@@ -51,6 +52,7 @@ module.exports = {
       console.info(chalk.green(`Operation success. File created.`));
     } catch (err) {
       console.error(chalk.red(`Can't write data to file, err: ${err}`));
+      process.exit(ExitCode.ERROR);
     }
   }
 };
