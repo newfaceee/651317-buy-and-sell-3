@@ -2,7 +2,7 @@
 const fs = require(`fs`).promises;
 const chalk = require(`chalk`);
 const {getRandomInt, shuffle, getPictureFileName, readContent} = require(`../utils.js`);
-const { ExitCode } = require("../../../../651317-typoteka-3/src/constants.js");
+const {ExitCode} = require(`../../constants`);
 
 const DEFAULT_COUNT = 1;
 const FILE_NAME = `mocks.json`;
