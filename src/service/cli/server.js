@@ -43,7 +43,6 @@ const onClientConnect = async (req, res) => {
       }
       break;
     default:
-      console.log('da');
       sendResponse(res, HttpCode.NOT_FOUND, notFoundMessageText);
       break;
   }
