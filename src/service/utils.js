@@ -27,6 +27,6 @@ module.exports.readContent = async (filePath) => {
     const content = await fs.readFile(filePath, `utf-8`);
     return content.split(`\n`);
   } catch (err) {
-    throw new Error(`Can't read data from the file, err: ${err}`);
+    throw new Error(chalk.red(`Can't read data from the file, err: ${err}`));
   }
 };

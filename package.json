@@ -12,7 +12,8 @@
     "eslint": "eslint --ext .js src/",
     "start": "node ./src/service/service.js",
     "start.dev": "nodemon ./src/main.js",
-    "server": "nodemon ./src/service/service.js --server"
+    "server": "nodemon ./src/service/service.js --server",
+    "start-front-server": "node ./src/express/index.js"
   },
   "author": "Edem Reshidov",
   "license": "ISC",
