@@ -11,7 +11,9 @@
     "test": "npm run eslint",
     "eslint": "eslint --ext .js src/",
     "start": "node ./src/service/service.js",
-    "start.dev": "nodemon ./src/main.js"
+    "start.dev": "nodemon ./src/main.js",
+    "server": "nodemon ./src/service/service.js --server",
+    "start-front-server": "node ./src/express/index.js"
   },
   "author": "Edem Reshidov",
   "license": "ISC",
@@ -23,5 +25,9 @@
     "eslint": "7.3.1",
     "eslint-config-htmlacademy": "0.5.2",
     "nodemon": "2.0.4"
+  },
+  "dependencies": {
+    "chalk": "4.1.0",
+    "express": "4.17.1"
   }
 }
