@@ -3,7 +3,7 @@
 const chalk = require(`chalk`);
 const express = require(`express`);
 const fs = require(`fs`);
-const {HttpCode, ExitCode, FILE_NAME} = require(`../../constants`);
+const {HttpCode, FILE_NAME} = require(`../../constants`);
 
 
 const DEFAULT_PORT = 3000;
@@ -35,15 +35,13 @@ module.exports = {
     try {
       app.listen(port, (err) => {
         if (err) {
-          return console.error(`Error while creating server`, err);
+          throw new Error(`Error while creating server, error: ${err}`);
         }
-
         return console.info(chalk.green(`Waiting for connection on port: ${port}`));
       });
 
     } catch (err) {
-      console.error(`Something went wrong, error: ${err.message}`);
-      process.exit(ExitCode.ERROR);
+      throw new Error(`Something went wrong, error: ${err}`);
     }
   }
 };
