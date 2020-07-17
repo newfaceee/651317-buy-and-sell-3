@@ -2,6 +2,8 @@
 
 const USER_ARGV_INDEX = 2;
 const DEFAULT_COMMAND = `--help`;
+const FILE_NAME = `mocks.json`;
+
 const ExitCode = {
   SUCCESS: 0,
   ERROR: 1,
@@ -18,5 +20,6 @@ module.exports = {
   USER_ARGV_INDEX,
   DEFAULT_COMMAND,
   ExitCode,
-  HttpCode
+  HttpCode,
+  FILE_NAME
 };

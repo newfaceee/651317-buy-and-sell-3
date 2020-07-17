@@ -2,7 +2,7 @@
 
 const chalk = require(`chalk`);
 const express = require(`express`);
-const fs = require(`fs`);
+const fs = require(`fs`).promises;
 const {HttpCode, FILE_NAME} = require(`../../constants`);
 
 
