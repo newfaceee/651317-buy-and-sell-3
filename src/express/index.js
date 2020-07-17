@@ -22,7 +22,7 @@ app.use((req, res) => {
 });
 
 app.use((req, res) => {
-  res.status(HttpCode.INTERNAL_SERVER_ERROR).render(`./erroes/500`);
+  res.status(HttpCode.INTERNAL_SERVER_ERROR).render(`./errors/500`);
 });
 
 app.listen(DEFAULT_PORT);
