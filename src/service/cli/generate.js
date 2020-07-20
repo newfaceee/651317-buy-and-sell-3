@@ -2,7 +2,6 @@
 const fs = require(`fs`).promises;
 const chalk = require(`chalk`);
 const {getRandomInt, shuffle, getPictureFileName, readContent} = require(`../utils.js`);
-const {ExitCode} = require(`../../constants`);
 
 const DEFAULT_COUNT = 1;
 const FILE_NAME = `mocks.json`;
@@ -42,17 +41,26 @@ module.exports = {
   name: `--generate`,
   async run(args) {
     const [count] = args;
+
+    let titles;
+    let categories;
+    let sentences;
+    try {
+      titles = await readContent(FILE_TITLES_PATH);
+      categories = await readContent(FILE_CATEGORIES_PATH);
+      sentences = await readContent(FILE_SENTENCES_PATH);
+    } catch (err) {
+      throw new Error(`Can't read content from the file, err: ${err}`);
+    }
+
     const countOffer = (!isNaN(Number.parseInt(count, 10)) && count > 0 && count <= 1000) ? Number.parseInt(count, 10) : DEFAULT_COUNT;
-    const titles = await readContent(FILE_TITLES_PATH);
-    const categories = await readContent(FILE_CATEGORIES_PATH);
-    const sentences = await readContent(FILE_SENTENCES_PATH);
     const content = JSON.stringify(generateOffers(countOffer, titles, categories, sentences));
+
     try {
       await fs.writeFile(FILE_NAME, content);
       console.info(chalk.green(`Operation success. File created.`));
     } catch (err) {
-      console.error(chalk.red(`Can't write data to file, err: ${err}`));
-      process.exit(ExitCode.ERROR);
+      throw new Error(`Can't write data to file, err: ${err}`);
     }
   }
 };

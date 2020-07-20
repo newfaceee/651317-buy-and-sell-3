@@ -4,6 +4,8 @@ const DEFAULT_PORT = 8000;
 const PUBLIC_DIR = `public`;
 const USER_ARGV_INDEX = 2;
 const DEFAULT_COMMAND = `--help`;
+const FILE_NAME = `mocks.json`;
+
 const ExitCode = {
   SUCCESS: 0,
   ERROR: 1,
@@ -22,5 +24,6 @@ module.exports = {
   ExitCode,
   HttpCode,
   DEFAULT_PORT,
-  PUBLIC_DIR
+  PUBLIC_DIR,
+  FILE_NAME,
 };
