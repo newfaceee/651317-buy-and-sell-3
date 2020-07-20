@@ -1,5 +1,7 @@
 'use strict';
 
+const DEFAULT_PORT = 8000;
+const PUBLIC_DIR = `public`;
 const USER_ARGV_INDEX = 2;
 const DEFAULT_COMMAND = `--help`;
 const ExitCode = {
@@ -18,5 +20,7 @@ module.exports = {
   USER_ARGV_INDEX,
   DEFAULT_COMMAND,
   ExitCode,
-  HttpCode
+  HttpCode,
+  DEFAULT_PORT,
+  PUBLIC_DIR
 };
