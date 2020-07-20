@@ -1,5 +1,7 @@
 'use strict';
 
+const DEFAULT_PORT = 8000;
+const PUBLIC_DIR = `public`;
 const USER_ARGV_INDEX = 2;
 const DEFAULT_COMMAND = `--help`;
 const FILE_NAME = `mocks.json`;
@@ -21,5 +23,7 @@ module.exports = {
   DEFAULT_COMMAND,
   ExitCode,
   HttpCode,
-  FILE_NAME
+  DEFAULT_PORT,
+  PUBLIC_DIR,
+  FILE_NAME,
 };
