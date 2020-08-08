@@ -3,7 +3,7 @@ const fs = require(`fs`).promises;
 const chalk = require(`chalk`);
 const {nanoid} = require(`nanoid`);
 const {getRandomInt, shuffle, getPictureFileName, readContent} = require(`../utils.js`);
-const {MAX_ID_LENGTH, MAX_COMMENTS} = require('../../constants');
+const {MAX_ID_LENGTH, MAX_COMMENTS} = require(`../../constants`);
 
 const DEFAULT_COUNT = 1;
 const FILE_NAME = `mocks.json`;
