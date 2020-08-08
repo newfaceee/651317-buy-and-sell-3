@@ -1,8 +1,5 @@
 'use strict';
 
-const {nanoid} = require('nanoid');
-const {MAX_ID_LENGTH} = require(`../../constants`);
-
 class CategoryService {
   constructor(offers) {
     this._offers = offers;  
@@ -16,3 +13,5 @@ class CategoryService {
     return [...categories];
   }
 }
+
+module.exports = CategoryService;
