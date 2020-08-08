@@ -5,6 +5,8 @@ const PUBLIC_DIR = `public`;
 const USER_ARGV_INDEX = 2;
 const DEFAULT_COMMAND = `--help`;
 const FILE_NAME = `mocks.json`;
+const MAX_ID_LENGTH = 6;
+const MAX_COMMENTS = 4;
 
 const ExitCode = {
   SUCCESS: 0,
@@ -26,4 +28,6 @@ module.exports = {
   DEFAULT_PORT,
   PUBLIC_DIR,
   FILE_NAME,
+  MAX_ID_LENGTH,
+  MAX_COMMENTS,
 };
